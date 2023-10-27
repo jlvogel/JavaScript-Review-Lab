@@ -553,16 +553,16 @@ user.friend.purchased.push("A latte")
 
 // Write a function oldAndLoudthat performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoudfunction with useras the argument.
 
-console.log(user)
+// console.log(user)
 
-function oldAndLoud(person){
-  person.age++
-  person.name = person.name.toUpperCase()
-}
+// function oldAndLoud(person){
+//   person.age++
+//   person.name = person.name.toUpperCase()
+// }
 
-oldAndLoud(user)
+// oldAndLoud(user)
 
-console.log(user)
+// console.log(user)
 
 
 
@@ -586,6 +586,14 @@ console.log(user)
 // console.log the cat's age
 // console.log the cat's breed
 
+const cat1 = {
+  name          : "Pluto",
+  breed         : "Orange",
+  age           : 2,
+}
+
+// console.log(cat1.age)
+// console.log(cat1.breed)
 
 
 // 2. Papa cat
@@ -594,6 +602,12 @@ console.log(user)
 // name
 // breed
 // age (a number)
+
+const cat2 = {
+  name          : "Charon",
+  breed         : "Calico",
+  age           : 1,
+}
 
 
 
@@ -628,9 +642,22 @@ console.log(user)
 // console.log(combineCats(cat1, cat2));
 // Result:
 
-
+//{ name: 'Joe Jam', age: 1, breed: 'Mog-Siamese' }
 
 // This is to demonstrate that a function can return an object
+
+function combineCats(mama, papa){
+  console.log("Mama is ", mama)
+  console.log("Papa is ", papa)
+  const kitten = {
+    name: `${mama.name} ${papa.name}`,
+    age: 1,
+    breed: `${mama.breed}-${papa.breed}`
+  }
+ return kitten
+}
+
+console.log("Kitten is ", combineCats(cat1, cat2))
 
 
 
@@ -645,7 +672,7 @@ console.log(user)
 
 // What is the result of:
 
-// console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
+console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
 // Whoa . . .
 
 // The above console.log is two levels deep of combineCats.
@@ -653,6 +680,12 @@ console.log(user)
 // Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats.
 // Your output should look something like:
 
+/*
+{ name: 'Joe JamJoe JamJoe JamJoe Jam', age: 1, breed: 'Mog-Siamese-Mog-Siamese-Mog-Siamese-Mog-Siamese' }
+*/
 
+const level2 = combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))
+const level3 = combineCats(level2, level2)
+console.log(level3)
 
 // Copyright © Per Scholas 2023
