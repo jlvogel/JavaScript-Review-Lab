@@ -35,25 +35,25 @@ Pseudocoding is putting the logic into english statements that a programmer in a
 // Using the provided variable definitions, replace the blanks so that all log statements print true in the console. Answers should be all be valid JS syntax and not weird things that don't make sense but happen to print true to the console
 
 
-const a = 4;
-const b = 53;
-const c = 57;
-const d = 16;
-const e = 'Kevin';
+// const a = 4;
+// const b = 53;
+// const c = 57;
+// const d = 16;
+// const e = 'Kevin';
 
-console.log(a < b);
-console.log(c > d);
-console.log('Name' === 'Name');
+// console.log(a < b);
+// console.log(c > d);
+// console.log('Name' === 'Name');
 
-// // FOR THE NEXT TWO, USE ONLY && OR ||
-console.log(true || false);
-console.log(false || false || false || false || false || true);
+// // // FOR THE NEXT TWO, USE ONLY && OR ||
+// console.log(true || false);
+// console.log(false || false || false || false || false || true);
 
-console.log(false === false)
-console.log((e === 'Kevin') + '\n');
-console.log(a != b + c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
-console.log(a != a + d); // note: the answer is a simple arithmetic equation, not something "weird"
-console.log(48 !== '48');
+// console.log(false === false)
+// console.log((e === 'Kevin') + '\n');
+// console.log(a != b + c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
+// console.log(a != a + d); // note: the answer is a simple arithmetic equation, not something "weird"
+// console.log(48 !== '48');
 
 
 // D. The farm
@@ -61,12 +61,13 @@ console.log(48 !== '48');
 // Write code that will print out "mooooo" if the it is equal to cow
 // Change your code so that if the variable animal is anything other than a cow, it will print "Hey! You're not a cow."
 
-let animal = "cw";
-if(animal == "cow") { 
-  console.log("mooooo")}
-  else {console.log("Hey! You're not a cow.")}
+// let animal = "cw";
+// if(animal == "cow") { 
+//   console.log("mooooo")}
+//   else {console.log("Hey! You're not a cow.")}
 
 // Commit
+// Committed my first commit with comment "Finished C and D"
 
 
 
@@ -88,14 +89,44 @@ if(animal == "cow") {
 
 // A. The basics
 // Write a loop that will print out all the numbers from 0 to 10, inclusive
+
+// for(i = 0; i<=10; i++){
+//   console.log(i);
+// }
+
 // Write a loop that will print out all the numbers from 10 up to and including 400
+
+// for(i = 10; i<=400; i++){
+//   console.log(i);
+// }
+
+
 // Write a loop that will print out every third number starting with 12 and going no higher than 4000
+
+// for(i = 12; i <=4000; i+=3){
+//   console.log(i);
+// }
 
 
 
 // B. Get even
 // Print out the numbers that are within the range of 1 - 100
+
+// for(i = 1; i <=100; i++){
+//   console.log(i);
+// }
+
 // Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+
+// for(i = 1; i <=100; i++){
+//   if(i%2==0) {
+//     console.log(i ,'<-- is an even number');
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+
 
 
 
@@ -105,6 +136,12 @@ if(animal == "cow") {
 
 // I found a 5. High five!
 // I found a 10. High five!
+
+// for(i = 0; i <=100; i++){
+//   if(i%5==0) {
+//     console.log('I found a ',i,'. High five!');
+//   } 
+// }
 
 
 // Add to the code from above to print out "I found a number. Three is a crowd" if the number is a multiple of three
@@ -249,8 +286,14 @@ if(animal == "cow") {
 
 // Like so?
 
+// function printGreeting(name){
+//   // return 'Hello there, ' + name + '!'
+//   return `Hello there, ${name}!`
+// }
+
+
 // console.log(printGreeting("Slimer"));
-// => Hello there, Slimer!
+// // => Hello there, Slimer!
 
 // You think you could? I think so too. Feel free to skip this problem, because you've already done it. If you've done the problem twice, read entire problems carefully before doing them from now on.
 
@@ -278,6 +321,28 @@ if(animal == "cow") {
 // D. isVowel
 // Write a function isVowelthat takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
 
+// function isVowel(char){
+// let chair = String(char)
+//   if(chair.length == 1){
+
+//     let string = "AEIOUaeiou"
+//     for(let i of string){
+
+//       console.log(i)
+
+//       if(chair == i){
+//         return true
+//       }
+//     }
+//     return false
+
+//   } else {
+//       return "You must enter 1 char length"
+//   }
+// }
+// console.log(isVowel("O"));
+
+
 // console.log(isVowel("a"));
 // => true
 
@@ -286,6 +351,14 @@ if(animal == "cow") {
 
 // E. getTwoLengths
 // Write a function getTwoLengthsthat accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+
+// function getTwoLengths(a,b){
+//   // 2 element array needs returned
+//   let myArray = [a.length, b.length]
+//   return myArray
+// }
+
+// console.log(getTwoLengths("thing 1", "thing 222"))
 
 // console.log(getTwoLengths("Hank", "Hippopopalous"));
 // => [4, 13]
@@ -299,13 +372,34 @@ if(animal == "cow") {
 // console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 // => [5, 4, 2, 2, 4]
 
-
+// function getMultipleLengths(myArray){
+  
+//   // let myArray = [a.length, b.length]
+//   let lengthArray = []
+//   for(let string of myArray){
+//     // console.log(lengthArray)
+//     lengthArray.push(string.length)
+//   }
+//     return lengthArray
+//   }
+  
+//   console.log(getMultipleLengths(["thing 1", "thing 222", "aoeunsth", "ppp"]))
 
 
 // G. maxOfThree
 // Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
 
-// console.log(maxOfThree(6, 9, 1));
+// function maxOfThree(a,b,c){
+//   // need to submit solution without Max.math
+//   let max = a
+//   let myArray = [a,b,c]
+//   for(i of myArray){
+//     if(i>max){max=i}
+//   }
+//   return max //Math.max(a,b,c)
+// }
+
+// console.log(maxOfThree(690, 9, 540));
 // => 9
 
 // Did you use Google and find Math.max()? If so, great job! Very resourceful—keep looking stuff up! However, for this particular question, we need you to submit a solution that does not use Math.max().
@@ -315,6 +409,20 @@ if(animal == "cow") {
 
 // H. printLongestWord
 // Write a function printLongestWordthat accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+
+
+// function printLongestWord(stringArray){
+//   let max = 0 // stringArray[0].length
+//   let max_str = ""
+//   for(const i of stringArray){
+//     // console.log(i)
+//     if(i.length>max){
+//       max=i.length
+//       max_str = i
+//     }
+//   }
+//   return max_str
+// }
 
 // console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 // => "Peanutbutter"
@@ -332,20 +440,32 @@ if(animal == "cow") {
 // Create an object called user.
 // Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchasedto an empty array []. Set the other values to whatever you would like.
 
+const user = {
+  name          : "Josh",
+  email         : "xyz@gmail.com",
+  age           : 38,
+  purchased     : []
+}
+
 
 
 // B. Update the user
 // Our user has changed his or her email address. Without changing the original userobject, update the emailvalue to a new email address.
+
+user.email = "abc@gmail.com"
+// console.log(user.email)
+
 // Our user has had a birthday! Without changing the original userobject, increment the agevalue using the postfix operator. Hint: age++
 
-
+user.age++
+// console.log(user.age)
 
 // C. Adding keys and values
 // You have decided to add your user's location to the data that you want to collect.
-
 // Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
 
-
+user.location = "Pittsburgh"
+// console.log(user.location)
 
 // D. Shopaholic!
 // Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
@@ -353,34 +473,59 @@ if(animal == "cow") {
 // Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
 // Console.log just the "Merino jodhpurs" from the purchasedarray.
 
-
-
+user.purchased.push("carbohydrates")
+// console.log(user.purchased)
+user.purchased.push("peace of mind")
+// console.log(user.purchased)
+user.purchased.push("Merino jodhpurs")
+// console.log(user.purchased)
+// console.log(user.purchased[2])
 // E. Object-within-object
 // Remember that you can add an object to an existing object in the same way that you can add any new property/value pair.
 
 // If we want to give our user a friendwith a nameand age, we could write:
 
-// user.friend = {
-//     name: "Grace Hopper",
-//     age: 85
-// }
+user.friend = {
+    name: "Grace Hopper",
+    age: 85
+}
 // When we console.log user, we would see the friendobject added to our user object.
+// console.log(user)
 
 // Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
-// Console.log just the friend's name
-// Console.log just the friend's location
-// CHANGE the friend's age to 55
-// The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
-// The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
-// Console.log just "A latte" from the friend's purchasedarray.
 
+user.friend.location = "San Francisco"
+user.friend.purchased = []
+
+// console.log(user.friend)
+
+// Console.log just the friend's name
+// console.log(user.friend.name)
+// Console.log just the friend's location
+// console.log(user.friend.location)
+// CHANGE the friend's age to 55
+user.friend.age = 55
+// The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
+user.friend.purchased.push("The One Ring")
+// The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+user.friend.purchased.push("A latte")
+
+// Console.log just "A latte" from the friend's purchasedarray.
+// console.log(user.friend)
+// console.log(user.friend.purchased[1])
 
 
 // F. Loops
 // Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), and prints each element to the console.
-// Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
+// console.log(user)
+// for(const item of user.purchased){
+//   console.log(item)
+// }
+// // Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
 
-
+// for(const item of user.friend.purchased){
+//   console.log(item)
+// }
 
 // G. Functions can operate on objects
 // Write a single function updateUserthat takes no parameters. When the function is run, it should:
@@ -388,7 +533,36 @@ if(animal == "cow") {
 // make the user's name uppercase
 // The function does not need a returnstatement, it will merely modify the user object.
 
+// console.log(user)
+
+// function updateUser(){
+//   user.age++
+
+//   // user.name.toUpperCase() - will not change the value of user.name
+//   //                         - strings are immutable in javascript
+
+//   user.name = user.name.toUpperCase()
+//   // this is the way to change the value of user.name
+// }
+
+// updateUser()
+
+// console.log(user)
+
+
+
 // Write a function oldAndLoudthat performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoudfunction with useras the argument.
+
+console.log(user)
+
+function oldAndLoud(person){
+  person.age++
+  person.name = person.name.toUpperCase()
+}
+
+oldAndLoud(user)
+
+console.log(user)
 
 
 
